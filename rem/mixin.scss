@@ -1,0 +1,36 @@
+/*定义1px下边框像素*/
+@mixin border-bottom-1px($color){
+    position: relative;
+    &:after{
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border: 1px solid $color;
+        width: 100%;
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+        content:"";
+    }
+}
+
+/*定义rem适配函数*/
+@function px2rem($px){
+    $rem:25;
+    @return ($px/$rem) + rem;
+}
+
+//设置内容滚动
+.isScroll{
+    padding-top:px2rem(55);
+    position: relative;
+    padding-bottom: px2rem(55);
+    background: #F5F5F5;
+    // min-height:px2rem(667); 
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+

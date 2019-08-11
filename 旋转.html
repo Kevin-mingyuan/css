@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>旋转图片</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#app{
+				/* display:inline-block; */
+				width: 100px;
+				height: 100px;
+				border: 1px solid #0000FF;
+				text-align: center;
+				line-height: 100px;
+				margin: 0 auto; 
+				margin-top: 50px;
+				border-radius: 10px;
+				background: linear-gradient(45deg,red,blue);
+				animation: route 10s linear infinite;
+			}
+			@keyframes route{
+				from{
+					transform: rotate(0deg);
+				}
+				to{
+					transform: rotate(360deg);
+				}
+			}
+			#app2{
+				/* display:inline-block; */
+				width: 100px;
+				height: 100px;
+				border: 1px solid #0000FF;
+				text-align: center;
+				line-height: 100px;
+				margin: 0 auto;
+				margin-top: 50px;
+				border-radius: 10px;
+				animation: route2 10s linear infinite;
+				background: linear-gradient(to right,red,blue);
+			}
+			@keyframes route2{
+				from{
+					transform: rotate(360deg);
+				}
+				to{
+					transform: rotate(0deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			HELLO
+		</div>
+		<div id="app2">
+			HELLO
+		</div>
+	</body>
+</html>
